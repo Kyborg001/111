@@ -1,0 +1,33 @@
+<style>
+    #container{
+        width: 400px;
+        height:200px;
+        background: green;}
+        #animate{
+            position:absolute;
+            background-image: url(0.jpg);
+            background-repeat: no-repeat;
+            background-size:150px;
+            width:200px;
+            height: 200px;}
+</style>
+
+<button onclick="myMove()">clic me</button>
+<div id="container">
+    <div id="animate"></div>
+    </div>
+
+
+<script>
+    function myMove() {
+        var elem = 
+        document.getElementById("animate")
+        var pos = 0;
+        var id = setInterval(frame,5);
+function frame(){
+    if (pos==200){clearInterval(id)
+    }else{
+        pos++;
+        elem.style.top=0 + "px";
+        elem.style.left=pos + "px"; }}}
+</script>
